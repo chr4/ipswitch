@@ -106,7 +106,7 @@ module Ipswitch
       arping << " |tail -n1"
 
       say 'Running arpping'
-      say exec(arping)[:stdout]
+      say exec(arping)[:stdout].chomp
     end
 
     def rdisc6(ip)
